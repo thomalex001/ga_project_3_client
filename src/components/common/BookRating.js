@@ -18,7 +18,6 @@ export default function BookRating({ rating, setRating }) {
         name="rating"
         value={ratingValue}
         onChange={({ target: { value } }) => setRating(value)}
-        readOnly
       />
     </Box>
   );
