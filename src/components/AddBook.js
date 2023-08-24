@@ -18,6 +18,7 @@ import DashboardNav from './common/DashboardNav';
 export default function AddBook() {
   const navigate = useNavigate();
   const [error, setError] = useState(false);
+  const [rating, setRating] = useState(0);
   const [availableGenres, setAvailableGenres] = useState(null);
   const [formData, setFormData] = useState({
     title: '',
@@ -27,7 +28,6 @@ export default function AddBook() {
     timeRead: '',
     diaryEntry: ''
   });
-  const [rating, setRating] = useState(0);
 
   useEffect(() => {
     API.GET(API.ENDPOINTS.allGenreNames)
@@ -132,7 +132,7 @@ export default function AddBook() {
             />
           </Box>
           <Box>
-            <BookRating setRating={setRating} rating={rating} />
+            <BookRating isReadOnly={false} setRating={setRating} rating={rating} />
           </Box>
           <Box>
             <TextareaAutosize

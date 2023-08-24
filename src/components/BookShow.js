@@ -46,7 +46,7 @@ const BookShow = () => {
   return (
     <>
       <Container maxWidth="lg" sx={{ display: 'flex' }} className="BookShow">
-        <Box>
+        <Box sx={{ width: '250px' }}>
           <img src={singleBook?.image} alt={singleBook?.title} />
         </Box>
         <Box>
