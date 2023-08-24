@@ -13,7 +13,7 @@ const MyLibrary = () => {
     API.GET(
       API.ENDPOINTS.userBooks(AUTH.getPayload().userId))
       .then(({ data }) => {
-        setBooks(data.myBooks); console.log(data.myBooks);
+        setBooks(data.myBooks);
       })
       .catch(({ message, response }) => {
         console.error(message, response);
