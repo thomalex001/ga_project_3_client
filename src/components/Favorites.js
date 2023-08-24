@@ -12,7 +12,7 @@ const MyLibrary = () => {
   useEffect(() => {
     API.GET(API.ENDPOINTS.userFavoriteBooks(AUTH.getPayload().userId), API.getHeaders())
       .then(({ data }) => {
-        setBooks(data.user.favoriteBooks); console.log('LOG', data.user.favoriteBooks);
+        setBooks(data.user.favoriteBooks);
       })
       .catch(({ message, response }) => {
         console.error(message, response);

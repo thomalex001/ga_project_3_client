@@ -6,24 +6,8 @@ import { Typography } from '@mui/material';
 
 export default function FavoriteButton({ id }) {
   const [isChecked, setIsChecked] = useState(false);
-
-  // useEffect(() => {
-  //   console.log(isChecked);
-  //   API.POST(
-  //     API.ENDPOINTS.userFavoriteBooks(AUTH.getPayload().userId),
-  //     {
-  //       bookId: id
-  //     },
-  //     API.getHeaders()
-  //   )
-  //     .then(() => {})
-  //     .catch(({ message, response }) => {
-  //       console.error(message, response);
-  //     });
-  // }, [isChecked]);
-
+  
   const handleChange = () => {
-    console.log(isChecked);
     API.POST(
       API.ENDPOINTS.userFavoriteBooks(AUTH.getPayload().userId),
       {
@@ -38,6 +22,7 @@ export default function FavoriteButton({ id }) {
     setIsChecked(!isChecked);
   };
 
+
   return (
     <>
       <Radio
@@ -47,9 +32,9 @@ export default function FavoriteButton({ id }) {
         name="radio-buttons"
         inputProps={{ 'aria-label': 'A' }}
       />
-      <Typography sx={{ fontSize: 12 }}>
-        Add/Remove from favorites
-      </Typography>
+      <Typography sx={{ fontSize: 12 }}>Add to favorites</Typography>
     </>
   );
 }
+
+
