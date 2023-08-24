@@ -8,14 +8,14 @@ import { Container } from '@mui/system';
 
 export default function Welcome() {
   const navigate = useNavigate();
-  const image = require('../assets/book-background.png');
+  const image = require('../assets/book-background.jpg');
 
   return (
     <Container
       sx={{
         display: 'flex',
         justifyContent: 'center',
-        backgroundImage: `radial-gradient(circle, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2) ), url(${image})`,
+        backgroundImage: `radial-gradient(circle, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2) ), url(${image})`,
         backgroundSize: 'cover',
         minWidth: '100vw',
         minHeight: '100vh',
@@ -24,9 +24,11 @@ export default function Welcome() {
       }}
     >
       <Box sx={{ mt: 16 }}>
-        <h1 style={{ color: '#e3e3e3' }}>WELCOME</h1>
         <p style={{ color: '#e3e3e3' }}>
-          The Diary Library: A hub to store all your favourite reads
+          Welcome to <em>The Diary Library</em>
+        </p>
+        <p style={{ color: '#e3e3e3' }}>
+          A hub to store all your favourite reads
         </p>
         <Button
           variant="contained"

@@ -225,7 +225,7 @@ export const API = { GET, POST, PUT, DELETE, ENDPOINTS, getHeaders };
 * Some of the images in the `BookCard` are not showing with the right format which can be due to some CSS rules. 
 
 ## Future Improvements
-* We would have like to find the time to show the avatar of User logged in on the `Navbar` and `Register` page, 
-
+* We would have like to find the time to show the avatar of User logged in on the `Navbar` and `Register` page
+* Adding a `fallBackImage` in case one of the link for `Book Cover` is invalid 
 ## THANKS FOR READING!
 

@@ -9,11 +9,12 @@ import {
 } from '@mui/material';
 
 import FavoriteButton from './FavoriteButton';
+import fallBackImage from '../../assets/bookCover.jpg';
 
 export default function BookCard({ title, author, genre, image, id }) {
   const navigate = useNavigate();
   const navigateToBook = () => navigate(`/diary-entries/${id}`);
-
+ 
   return (
     <Card
       sx={{
